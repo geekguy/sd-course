@@ -1,12 +1,16 @@
 config:
-  target: "http://localhost:3000"
+  target: "http://144.126.252.10" #// load balancer
+  # target: "http://159.89.166.34" #// bigger machine
+  # target: "http://144.126.252.5" #// smaller machine
+
   phases:
-    - duration: 10
+    - duration: 30
       arrivalRate: 10
+      rampTo: 20
       name: Warm up
     - duration: 200
-      arrivalRate: 10
-      rampTo: 100
+      arrivalRate: 50
+      # rampTo: 100
       name: Ramp up load
     - duration: 100
       arrivalRate: 500
