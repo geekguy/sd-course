@@ -14,7 +14,7 @@ config:
       name: Ramp up load
     - duration: 100
       arrivalRate: 500
-      name: Sustained load
+      name: Crash!
   # payload:
   #   # Load search keywords from an external CSV file and make them available
   #   # to virtual user scenarios as variable "keywords":
